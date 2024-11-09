@@ -1,0 +1,15 @@
+name: Access CTF Challenge
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Permite ejecutar manualmente el flujo de trabajo
+
+jobs:
+  access-ctf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make request to CTF challenge
+        run: |
+          curl -X GET https://actions.ctf.cert.unlp.edu.ar
