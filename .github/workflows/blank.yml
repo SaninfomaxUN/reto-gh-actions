@@ -12,4 +12,6 @@ jobs:
     steps:
       - name: Make request to CTF challenge
         run: |
-          curl -X GET https://actions.ctf.cert.unlp.edu.ar
+          curl -X GET https://actions.ctf.cert.unlp.edu.ar \
+               -H "Content-Type: application/json" \
+               -d "{}"
